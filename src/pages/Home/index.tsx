@@ -1,4 +1,5 @@
 import Button from 'components/Navbar/Button';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 const Home = () => {
@@ -6,7 +7,9 @@ const Home = () => {
     <div className="home-container">
       <h1>Desafio Github API</h1>
       <h3>DevSuperior - Escola de programação</h3>
-      <Button text='Começar'/>
+      <Link to="/profile">
+        <Button text="Começar" />
+      </Link>
     </div>
   );
 };

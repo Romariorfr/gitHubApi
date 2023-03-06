@@ -4,9 +4,9 @@ type Props = {
   text: string;
 };
 
-const Button = ({text}: Props) => {
+const Button = ({ text }: Props) => {
   return (
-    <div className='btn-container'>
+    <div className="btn-container">
       <button>{text}</button>
     </div>
   );
