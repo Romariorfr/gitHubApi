@@ -4,11 +4,10 @@ import Navbar from 'components/Navbar';
 
 const Routes = () => (
   <BrowserRouter>
+    <Navbar />
     <Switch>
-      <Navbar/>
-      <Route path="/" exact>
-        <Home />
-      </Route>
+      <Home />
+      <Route path="/" exact></Route>
     </Switch>
   </BrowserRouter>
 );
