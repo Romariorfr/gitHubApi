@@ -7,7 +7,7 @@ type Props = {
 const Button = ({ text }: Props) => {
   return (
     <div className="btn-container">
-      <button>{text}</button>
+      <button type='submit'>{text}</button>
     </div>
   );
 };

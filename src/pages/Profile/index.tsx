@@ -1,12 +1,13 @@
+import axios from 'axios';
 import Button from 'components/Navbar/Button';
 import { useState } from 'react';
 import './styles.css';
 
 type GitHubData = {
-  photo: string;
-  profile: string;
+  avatar_url: string;
+  url: string;
   followers: string;
-  locations: string;
+  location: string;
   name: string;
 };
 
@@ -24,45 +25,62 @@ const Profile = () => {
     const value = event.target.value;
 
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    axios
+      .get(`https://api.github.com/users/${formData.userName}`)
+      .then((response) => {
+        setGitHubData(response.data);
+      })
+      .catch((error) => {
+        setGitHubData(undefined);
+        console.log(error);
+      });
   };
 
   return (
     <div className="profile-container">
-      <div className="card-container">
-        <h1>Encontre um perfil GutHub</h1>
-        <input
-          name="userName"
-          onChange={handleChange}
-          placeholder="Usuário Github"
-        />
-        <Button text="Encontrar" />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="card-container">
+          <h1>Encontre um perfil GutHub</h1>
+          <input
+            name="userName"
+            onChange={handleChange}
+            placeholder="Usuário Github"
+          />
+          <Button text="Encontrar" />
+        </div>
+      </form>
 
-      <div className="card-info">
-        <div className="img-github">
-          <p>imagem</p>
+      {gitHubData && (
+        <div className="card-info">
+          <div className="img-github">
+            <p>imagem</p>
+          </div>
+          <div className="data-github">
+            <p className="title-info">informações</p>
+            <div>
+              <h4>Perfil:</h4>
+              <p className="color-link">{gitHubData.url}</p>
+            </div>
+            <div>
+              <h4>Seguidores:</h4>
+              <p>{gitHubData.followers}</p>
+            </div>
+            <div>
+              <h4>Localidade:</h4>
+              <p>{gitHubData.location}</p>
+            </div>
+            <div>
+              <h4>Nome:</h4>
+              <p>{gitHubData.name}</p>
+            </div>
+          </div>
         </div>
-        <div className="data-github">
-          <p className="title-info">informações</p>
-          <div>
-            <h4>Perfil:</h4>
-            <p className="color-link">https://api.github.com/users/acenelio</p>
-          </div>
-          <div>
-            <h4>Seguidores:</h4>
-            <p>4379</p>
-          </div>
-          <div>
-            <h4>Localidade:</h4>
-            <p>Uberlândia</p>
-          </div>
-          <div>
-            <h4>Nome:</h4>
-            <p>Nelio Alvez</p>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
