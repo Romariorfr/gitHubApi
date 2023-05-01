@@ -1,46 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<H1 align="center">GitHub API</h1>
 
-## Available Scripts
+<H3 align="center"> Encontre um perfil no github</H3>
+<H4 align="center">
+"Github API" é uma aplicação web em React que utiliza a API do Github para buscar e exibir informações de usuários na plataforma.</H4>
 
-In the project directory, you can run:
 
-### `yarn start`
+ Página home               |        
+:-------------------------:|
+![](https://github.com/Romariorfr/img-app/blob/master/github-api/home.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ Página de busca           |        
+:-------------------------:|
+![](https://github.com/Romariorfr/img-app/blob/master/github-api/busca.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ Página com perfil         |        
+:-------------------------:|
+![](https://github.com/Romariorfr/img-app/blob/master/github-api/perfil.png)
 
-### `yarn test`
+## 💻 Sobre o projeto
+O projeto "Github API" é uma aplicação web desenvolvida em React que utiliza a API do Github para buscar usuários e exibir informações relevantes sobre seus perfis. O usuário pode digitar o nome de um usuário do Github na barra de busca e visualizar suas informações como nome completo, bio, número de repositórios e seguidores. A aplicação é desenvolvida com as melhores práticas em React, utilizando componentes funcionais e hooks para gerenciar o estado da aplicação e lidar com as requisições da API do Github de forma eficiente. É uma ferramenta útil para desenvolvedores que desejam buscar perfis de outros desenvolvedores na plataforma do Github.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Principais Habilidades adquiridas nesse projeto:
+- [x] Conhecimento sobre a utilização da API do Github para buscar informações de usuários na plataforma.
+- [x] Habilidade em lidar com requisições assíncronas e tratar erros na comunicação com a API do Github.
+- [x] Capacidade de criar interfaces intuitivas e responsivas para melhorar a experiência do usuário.
+- [x] Conhecimento em gerenciamento de dependências de bibliotecas e pacotes com o npm ou Yarn.
 
-### `yarn build`
+## ⚙️ Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] Busca de usuários.
+- [x] Exibição de informações do perfil.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :books: Tecnologias utilizadas
 
-### `yarn eject`
+### Front end
+- HTML / CSS / JS / TypeScript
+- ReactJS
+- React Native
+- React Router DOM
+- React Hooks 
+- Bootstrap
+- Axios
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :astronaut: Author 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Romário Ferreira de Rezende / Desenvolvedor Web Full stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://www.linkedin.com/in/romarioferreiradeveloper
